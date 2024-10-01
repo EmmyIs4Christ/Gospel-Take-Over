@@ -1,16 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
 
-// import Home from "./pages/Home";
-// import PageNotFound from "./pages/PageNotFound";
-// import User from "./pages/User";
-// import Login from "./pages/Login";
-// import Detail from "./pages/Detail";
-// import Join from "./pages/Join";
-// import UpComingEvents from "./pages/UpComingEvents";
-// import Construction from "./pages/Construction";
-// import SearchResults from "./pages/SearchResults";
-
 import { accountUsers } from "./constants";
 
 const Home = React.lazy(() => import("./pages/Home"));
