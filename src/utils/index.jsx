@@ -1,11 +1,9 @@
 import gtoIcon from "/logoImg.png";
 import gtoImg from "../assets/gospelTakeOver.jpg";
 
-import handburgerBtn from "../assets/handburgerimg.png";
+import handburgerBtn from "../assets/handburgerImg.png";
 import imgBanner from "../assets/bgImgMusic2.jpg";
 import bengospel from "../assets/bengospelBgImg.jpeg";
-// import benbg from ;
-// import benprofileImg from ;
 import upArrow from "../assets/arrowUp.png";
 import downArrow from "../assets/arrowdown.png";
 import bwave from "../assets/banner-waves.png";
