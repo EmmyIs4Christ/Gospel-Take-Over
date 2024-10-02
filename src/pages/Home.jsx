@@ -6,12 +6,7 @@ import RecentlyAdded from "../components/RecentlyAdded";
 import Footer from "../components/Footer";
 import { allVideos } from "../constants";
 
-import { useParams, useLocation } from "react-router-dom";
-
 const Home = () => {
-  const params = useParams();
-  const location = useLocation();
-
   return (
     <>
       <Header />
