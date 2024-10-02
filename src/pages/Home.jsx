@@ -13,7 +13,6 @@ const Home = () => {
       <Hero />
       <TrendingSongs />
       <TrendingVideos allVideos={allVideos} />
-      {/* {location.pathname === "/" && <TrendingAlbums />} */}
       <RecentlyAdded />
 
       <Footer />
