@@ -34,17 +34,23 @@ const TrendingSongs = () => {
         }}
         className="w-full group/parent flex items-stretch overflow-x-auto pb-1 scroll- scroll-smooth"
       >
-        {shuffledSongs.map((song) => (
-          <TrendingSong
-            key={song.id}
-            img={song.bgImg}
-            url={song.url}
-            title={song.title}
-            artist={song.artist}
-            audio={song.audio}
-            id={song.id}
-          />
-        ))}
+        {shuffledSongs.map((song, idx) => {
+          if (idx > 5) {
+            return;
+          } else {
+            return (
+              <TrendingSong
+                key={song.id}
+                img={song.bgImg}
+                title={song.title}
+                url={song.url}
+                artist={song.artist}
+                audio={song.audio}
+                id={song.id}
+              />
+            );
+          }
+        })}
         <button
           onClick={() => {
             scroll("right");

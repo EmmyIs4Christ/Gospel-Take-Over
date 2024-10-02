@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { benAllVideos } from "../constants";
-import TopTrack from "../components/TopTrack";
-// import TrendingVideos from "../components/TrendingVideos";
 import Videos from "../components/Videos";
 import Songs from "../components/Songs";
 import Song from "../components/Song";
 
-import { Link, NavLink, Route, Routes, useNavigate } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 
-// import { useParams, Navigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 import { upImg, downImg } from "../utils";
@@ -20,17 +17,13 @@ import {
   benAudioThree,
   benVideos,
   allSongs,
-  allVideos,
 } from "../constants";
 
 const User = () => {
   const owner = owners[0];
-  // const params = useParams();
   const location = useLocation();
   const pathName = location.pathname;
   const targetSong = allSongs.filter((item) => item.url === pathName);
-  // console.log(location, location.pathname);
-  // console.log(targetSong);
 
   const [openBox, setOpenBox] = useState(false);
 
@@ -116,13 +109,8 @@ const User = () => {
                   >
                     {
                       <Link
-                        // className={(navData) =>
-                        //   navData.isActive
-                        //     ? "border-b-2 p-3 px-2 border-[red] opacity-100"
-                        //     : "opacity-50 p-3 border-transparent px-2"
-                        // }
                         className={
-                          link.url === pathName
+                          link.url === pathName || `${link.url}/` === pathName
                             ? "border-b-2 p-3 px-2 border-[red] opacity-100"
                             : "opacity-50 p-3 border-transparent px-2"
                         }

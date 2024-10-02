@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import RecentlyAdded from "../components/RecentlyAdded";
@@ -34,7 +34,6 @@ const SearchResults = () => {
     return acc; // Return the accumulator for the next iteration
   }, []);
 
-  //   console.log(uniqueArray, results);
   return (
     <>
       <Header />

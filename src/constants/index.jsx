@@ -59,7 +59,7 @@ export const upComingLinks = [
   {
     id: 1,
     title: "UP COMING EVENTS",
-    url: "/up_coming",
+    url: "/up_comings",
   },
   {
     id: 2,

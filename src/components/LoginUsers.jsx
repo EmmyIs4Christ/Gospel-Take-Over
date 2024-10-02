@@ -26,7 +26,11 @@ const LoginUsers = () => {
         </div>
 
         <h2 className="font-[600] text-basis">
-          SIGN UP OR LOGIN TO GOSPEL TAKE OVER
+          <Link className="text-[red] underline" to={"/join"}>
+            {" "}
+            SIGN UP
+          </Link>{" "}
+          OR LOGIN TO GOSPEL TAKE OVER
         </h2>
 
         <div className="my-8 border-b-2 border-slate-700 pb-5">
