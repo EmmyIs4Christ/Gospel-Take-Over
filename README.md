@@ -1,8 +1,8 @@
-# React + Vite
+# Gospel Take Over: Empowering Gospel Music
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gospel Takeover web APP is a music platform dedicated to connecting gospel musicians with their fans worldwide.
 
-Currently, two official plugins are available:
+New Users sign up to the platform and provide basic information about their music and goals.
+They can also upload their musics, share their links on all social media platforms.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Others can visit the site and search for songs or artist, stream the videos or songs online and also are able to download them.
