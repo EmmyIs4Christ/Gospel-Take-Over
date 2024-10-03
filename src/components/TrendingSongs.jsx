@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { allSongs } from "../constants";
 
 const TrendingSongs = () => {
+  // Enabling scroll in the X direction
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -34,6 +35,8 @@ const TrendingSongs = () => {
         }}
         className="w-full group/parent flex items-stretch overflow-x-auto pb-1 scroll- scroll-smooth"
       >
+        {/* Shuffling content when component is rendered to make the page look
+        dynamic */}
         {shuffledSongs.map((song, idx) => {
           if (idx > 5) {
             return;
@@ -51,6 +54,7 @@ const TrendingSongs = () => {
             );
           }
         })}
+        {/* Button to scroll to right */}
         <button
           onClick={() => {
             scroll("right");

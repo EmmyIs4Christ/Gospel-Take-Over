@@ -17,6 +17,7 @@ export const shuffleArray = (arr) => {
 };
 
 const RecentlyAdded = () => {
+  // Enabling scroll in the X direction
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -26,6 +27,7 @@ const RecentlyAdded = () => {
     }
   };
 
+  // Shuffling content when component is rendered to make the page look dynamic
   const shuffledSongs = shuffleArray(allSongs);
   return (
     <section className="max-width bg-[#121212] relative my-16 w-[95%] sm:py-0 ">
@@ -44,6 +46,7 @@ const RecentlyAdded = () => {
         className="w-full group/parent flex items-stretch overflow-x-auto pb-1 scroll- scroll-smooth"
       >
         {shuffledSongs.map((song, idx) => {
+          // Rendering some not all to reduce loading time
           if (idx > 5) {
             return;
           } else {
@@ -60,6 +63,7 @@ const RecentlyAdded = () => {
             );
           }
         })}
+        {/* Button to scroll to right */}
         <button
           onClick={() => scroll("right")}
           className="absolute opacity-0 transition-all duration-500 group-hover/parent:opacity-100 size-20 rounded-full grid place-items-center bg-[red] right-0 top-[41%]"

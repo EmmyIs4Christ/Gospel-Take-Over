@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 const LoginUsers = () => {
   const navigate = useNavigate();
 
+  // Submit form handler function
   const submitLoginHandler = (event) => {
     event.preventDefault();
     navigate("/return_to_site");

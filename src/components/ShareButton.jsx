@@ -18,16 +18,6 @@ const ShareButton = () => {
     setShowModal(false);
   });
 
-  // document.addEventListener("click", (event) => {
-  //   if (!event.target.contains(document.getElementById("shareHouse"))) {
-  //     setShowModal(false);
-  //   }
-  //   console.log(
-  //     event.target,
-  //     !event.target.contains(document.getElementById("shareHouse"))
-  //   );
-  // });
-
   const handleShare = async () => {
     toggleModal();
     if (navigator.share) {

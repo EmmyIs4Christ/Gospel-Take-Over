@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 import { allSongs } from "../constants";
 
 const Song = (props) => {
+  // Get song id via props, filter all song to retrieve the exact song
   const song = allSongs.filter((item) => item.id === props.id);
   // console.log(song[0], props);
   const { bgImg, url, ft, title, artist, audio, id, date } = song[0];
   return (
+    // Dynamically render song based on the id match
     <div className="group rounded-lg  transition-all duration-500 w-full my-8 shrink-0 mr-2 relative">
       <div className="flex rounded-lg r bg-[#121212] justify-start">
         <div className="size-[200px] rounded-ss-lg rounded-b-none overflow-hidden">

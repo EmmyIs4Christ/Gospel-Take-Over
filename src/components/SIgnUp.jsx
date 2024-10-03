@@ -6,6 +6,7 @@ import { bannerWave } from "../utils";
 const SIgnUp = () => {
   const navigate = useNavigate();
 
+  // Submit form handler function
   const submitLoginHandler = (event) => {
     event.preventDefault();
     navigate("/return_to_site");

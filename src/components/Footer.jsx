@@ -6,6 +6,7 @@ import { socialMediaSVGs, footerLinksOne, footerLinksTwo } from "../constants";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // use current date
   const currentYear = new Date().getFullYear();
   return (
     <>

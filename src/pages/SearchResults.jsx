@@ -6,14 +6,20 @@ import RecentlyAdded from "../components/RecentlyAdded";
 import { allSongs } from "../constants";
 import Song from "../components/Song";
 
+// Getting the names of all artists
 const artists = allSongs.map((item) => {
   return { search: item.artist, id: item.id };
 });
+
+// Getting the title of all songs
 const songs = allSongs.map((item) => {
   return { search: item.title, id: item.id };
 });
+
+// Combine both arrays to one so as to easily interat and search for artist or song
 const wordList = artists.concat(songs);
 
+// Fetching the search result via useLocation
 const SearchResults = () => {
   const location = useLocation();
   const searchTerm = location.search;
@@ -38,9 +44,11 @@ const SearchResults = () => {
     <>
       <Header />
       <div className="mt-[100px] w-[95%] mx-auto">
+        {/* Rendering search result(s) */}
         {uniqueArray.length > 0 &&
           uniqueArray.map((item) => <Song key={item.id} id={item.id} />)}
 
+        {/* Fall back if no result was found */}
         {uniqueArray.length === 0 && (
           <div>
             <h2 className="text-center font-[600] text-2xl">

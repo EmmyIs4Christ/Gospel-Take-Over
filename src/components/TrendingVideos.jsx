@@ -6,6 +6,7 @@ import { rightDirection } from "../constants/svg";
 import { shuffleArray } from "./RecentlyAdded";
 
 const TrendingVideos = (props) => {
+  // Enabling scroll in the X direction
   const scrollRef = useRef(null);
 
   const shuffledArr = shuffleArray(props.allVideos);
@@ -32,6 +33,8 @@ const TrendingVideos = (props) => {
         }}
         className="w-full group/parent flex items-stretch overflow-x-auto pb-1 scroll- scroll-smooth"
       >
+        {/* Shuffling content when component is rendered to make the page look
+        dynamic */}
         {shuffledArr.map((video, idx) => {
           if (idx > 5) {
             return;
@@ -39,6 +42,7 @@ const TrendingVideos = (props) => {
             return <TrendingVideo key={idx} url={video} />;
           }
         })}
+        {/* Button to scroll to right */}
         <button
           onClick={() => scroll("right")}
           className="absolute opacity-0 transition-all duration-500 group-hover/parent:opacity-100 size-20 rounded-full grid place-items-center bg-[red] right-0 top-[41%]"

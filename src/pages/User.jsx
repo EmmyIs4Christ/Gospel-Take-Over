@@ -23,16 +23,18 @@ const User = () => {
   const owner = owners[0];
   const location = useLocation();
   const pathName = location.pathname;
+
+  // Detecting song that was clicked by comparing the url with pathName
   const targetSong = allSongs.filter((item) => item.url === pathName);
 
+  // Toggle user data state
   const [openBox, setOpenBox] = useState(false);
 
   const toggleBoxHandler = () => {
     setOpenBox((prevVal) => !prevVal);
   };
 
-  const user = location.pathname.slice(1);
-
+  // Defining values for NavLinks/Links
   const navLinks = [
     { title: "All", url: `/bengospel` },
     { title: "Top Tracks", url: `/bengospel/songs` },
@@ -44,6 +46,7 @@ const User = () => {
     <>
       <Header />
       <main className="w-full mt-[75px] max-width py-2">
+        {/* Gallery image and DP div*/}
         <div className="relative h-[290px]">
           <img
             className="size-full object-cover"
@@ -58,8 +61,10 @@ const User = () => {
             />
           </div>
         </div>
+        {/* End of Gallery */}
 
         <div className="flex flex-col md:flex-row px-5">
+          {/* Side bar for user's data */}
           <div className="mt-[55px] md:mr-5 md:w-[25%] sm:mt-[110px] ">
             <div className="relative  border-slate-700 border-b ">
               <div className="mb-2">
@@ -98,8 +103,10 @@ const User = () => {
               ))}
             </div>
           </div>
+          {/* End of side bar */}
 
           <div className="md:w-[75%] ">
+            {/* Nav links to dynamic routes */}
             <div className="w-full ">
               <ul className="flex mt-[5px] justify-stretch py-3 w-full  border-b border-slate-700">
                 {navLinks.map((link) => (
@@ -123,8 +130,10 @@ const User = () => {
                 ))}
               </ul>
             </div>
+            {/* End of nav links */}
 
             <Routes>
+              {/* Rout for the default page */}
               <Route
                 element={
                   <div>
@@ -160,6 +169,7 @@ const User = () => {
                 path=""
               />
 
+              {/* Route for user's videos page */}
               <Route
                 element={
                   <div>
@@ -175,8 +185,10 @@ const User = () => {
                 path="videos"
               />
 
+              {/* Route for user's songs page */}
               <Route element={<Songs allSong={allSongs} />} path="songs" />
 
+              {/* Route for user's albums page */}
               <Route
                 element={
                   <div>
@@ -194,6 +206,7 @@ const User = () => {
                 path="albums"
               />
 
+              {/* Route for any user's song clicked */}
               <Route
                 element={
                   targetSong.length > 0 && <Song id={targetSong[0].id} />

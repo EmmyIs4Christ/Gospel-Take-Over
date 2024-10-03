@@ -1,12 +1,12 @@
 import React from "react";
 import { banner } from "../utils";
 
-
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const navigate = useNavigate();
 
+  // Upload song redirect function
   const uploadHandler = () => {
     navigate("/login");
   };

@@ -4,6 +4,8 @@ import { shuffleArray } from "./RecentlyAdded";
 
 const Songs = (props) => {
   const { allSong } = props;
+
+  // Shuffling content when component is rendered to make the page look dynamic
   const shuffledSongs = shuffleArray(allSong);
   return (
     <section className="max-width relative my-16 w-[95%] sm:py-0 ">
