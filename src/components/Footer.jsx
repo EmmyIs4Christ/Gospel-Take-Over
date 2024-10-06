@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
 
           <p className="text-center font-light text-sm my-6">
-            © {currentYear} WEB'S PHARMACY CODING HUB - All Rights Reserved
+            © {currentYear} Ugwu Emmanuel Ifeanyi - All Rights Reserved
           </p>
         </div>
       </footer>

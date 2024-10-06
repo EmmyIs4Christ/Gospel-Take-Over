@@ -1,8 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import React, { useState, useRef } from "react";
-import { allSongs } from "../constants";
 
-import { hdBtn, icon } from "../utils";
+import { icon } from "../utils";
 import { homeLinks, upComingLinks } from "../constants";
 
 const Header = () => {
@@ -11,18 +10,22 @@ const Header = () => {
   const inputRef = useRef(null);
   const navigate = useNavigate();
 
+  // Focus on form input function
   const focusInput = () => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
   };
 
+  // Functions for handling side bar
   const showBarHandler = () => {
     setShowBar(true);
   };
   const closeBarHandler = () => {
     setShowBar(false);
   };
+
+  // Toggle and focus form input function
   const setMobileSearchHandler = () => {
     setMobileSearch((prev) => !prev);
     let focusTimout = setTimeout(() => {
@@ -46,8 +49,8 @@ const Header = () => {
   };
 
   return (
-    // SIDE BAR ON CLICK HANDBURGER BUTTON
     <header className="w-full fixed z-30 right-0 left-0 top-0 h-[70px] shadow-lg p-4 text-[#515050] bg-white">
+      {/* SIDE BAR for Mobile devices starts here */}
       <div
         className={`absolute bg-[#121212] w-[100vw] ${
           !showBar ? "-translate-x-[110%]" : "translate-x-0"
@@ -97,9 +100,10 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {/* Side bar for mobile devices ends here */}
 
       {/* NAV BAR STARTS FROM HERE  */}
-      <nav className="flex-between  items-center h-[50px] max-w-7xl mx-auto  backdrop-blur-lg ">
+      <nav className="flex-between  items-center h-[50px] max-w-7xl mx-auto  ">
         <div className="flex justify-evenly h-full">
           <ul className="flex-between space-x-1 sm:space-x-2 items-center">
             <li onClick={showBarHandler}>
